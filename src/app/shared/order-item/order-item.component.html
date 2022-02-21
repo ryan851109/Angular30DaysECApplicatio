@@ -1,0 +1,13 @@
+
+<div class="app-order-item">
+  <div class="img" [ngStyle]="{'background-image' : 'url(' + item.src + ')' ,'background-size': 'cover'}"></div>
+
+  <div class="description">
+
+    <div class="content">
+      <p>{{item.name}}({{(item.account || 1)}})</p>
+      <p>NT$ {{item.price * (item.account || 1)}}</p>
+    </div>
+
+  </div>
+</div>

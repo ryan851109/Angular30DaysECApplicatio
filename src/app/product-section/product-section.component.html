@@ -1,0 +1,31 @@
+<div class="container">
+
+  <!-- 甜點類別區域開始 -->
+  <aside>
+    <h3 class="bg-dark-green font-light-green">甜點類別</h3>
+    <ul class="font-dark-green">
+      <li [routerLink]="[types[0].type]" [class.selected] = "checkType(types[0].type)" (click)="setType(types[0].type)">
+          所有甜點（{{getProductAccount(types[0].type)}}）
+      </li>
+      <li [routerLink]="[types[1].type]" [class.selected] = "checkType(types[1].type)" (click)="setType(types[1].type)">
+          本日精選（{{getProductAccount(types[1].type)}}）
+      </li>
+      <li [routerLink]="[types[2].type]" [class.selected] = "checkType(types[2].type)" (click)="setType(types[2].type)">
+          人氣推薦（{{getProductAccount(types[2].type)}}）
+      </li>
+      <li [routerLink]="[types[3].type]" [class.selected] = "checkType(types[3].type)" (click)="setType(types[3].type)">
+          新品上市（{{getProductAccount(types[3].type)}}）
+      </li>
+    </ul>
+  </aside>
+  <!-- 甜點類別區域結束 -->
+
+  <!-- 商品區域開始 -->
+  <article>
+
+    <router-outlet></router-outlet>
+
+  </article>
+  <!-- 商品區域結束 -->
+
+</div>

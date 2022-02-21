@@ -1,0 +1,83 @@
+.cart-item {
+  overflow: hidden;
+  padding: 20px 0px;
+  border-bottom: #EAF0ED 1px solid;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item > p,
+.cart-item .description {
+  float: left;
+}
+
+.cart-item > p {
+  line-height: 110px;
+  height: 110px;
+}
+
+.cart-item > p:first-child {
+  width: 110px;
+  background-size: cover;
+  background-position: center center;
+  margin-right: 39px;
+}
+
+/* .cart-item:first-child > p:first-child {
+  background-image: url(/assets/images/others/brenda-godinez-367708-unsplash.jpg);
+}
+
+.cart-item:nth-child(2) > p:first-child {
+  background-image: url(/assets/images/others/food-photographer-jennifer-pallian-650641-unsplash.jpg);
+}
+
+.cart-item:last-child > p:first-child {
+  background-image: url(/assets/images/others/brooke-lark-96398-unsplash.jpg);
+} */
+
+.cart-item .description {
+  height: 110px;
+  width: 107px;
+  margin-right: 39px;
+}
+
+.cart-item .description .content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cart-item .description .content p:first-child {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 3px;
+}
+
+.cart-item > p:nth-child(3) {
+  margin-right: 38px;
+}
+
+.cart-item > p:nth-child(3) span {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #EAF0ED;
+}
+
+.cart-item > p:nth-child(3) span:nth-child(2) {
+  border-left: none;
+  border-right: none;
+}
+
+.cart-item > p:nth-child(4) {
+  width: 121px;
+}
+
+.cart-item > p:last-child {
+  cursor: pointer;
+}

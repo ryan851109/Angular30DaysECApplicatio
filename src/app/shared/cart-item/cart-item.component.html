@@ -1,0 +1,17 @@
+<div class="cart-item">
+
+  <p class="img" [ngStyle]="{'background' : 'url(' + item.src + ')' ,'background-size': 'cover'}"></p>
+
+  <div class="description">
+
+    <div class="content">
+      <p>{{item.name}}</p>
+      <p>NT$ {{item.price}}</p>
+    </div>
+
+  </div>
+  <p><span (click)="modifyAccount(-1)">-</span><span>{{item.account || 1}}</span><span (click)="modifyAccount(1)">+</span></p>
+  <p>NT$ {{item.price * (item.account || 1)}}</p>
+  <p class="desktop"><i class="material-icons" (click)="removeProduct(item)">delete_outline</i></p>
+
+</div>

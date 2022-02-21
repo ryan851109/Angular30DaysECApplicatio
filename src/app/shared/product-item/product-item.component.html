@@ -1,0 +1,18 @@
+<!-- 精選商品區域開始 -->
+<div class="choice-item desktop">
+
+  <p class="font-light-green bg-dark-green">{{item.type}}</p>
+
+  <div class="img-container">
+    <img [src]="item.src" alt="">
+  </div>
+
+  <div class="description font-dark-green">
+    <p>{{item.name}}</p>
+    <p>{{item.price}}</p>
+  </div>
+
+  <button class="font-dark-green bg-light-green" (click)="addProductToOrder(item)">加入購物車</button>
+
+</div>
+<!-- 精選商品區域開始 -->

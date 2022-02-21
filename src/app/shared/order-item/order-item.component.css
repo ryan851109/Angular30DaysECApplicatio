@@ -1,0 +1,49 @@
+.app-order-item {
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.app-order-item:last-child {
+  margin-bottom: 0px;
+}
+
+.app-order-item > div {
+  float: left;
+  width: 120px;
+  height: 80px;
+}
+
+.app-order-item .img {
+  background-size: cover;
+  background-position: center center;
+  margin-right: 18px;
+}
+
+/* .app-order-item:first-child .img {
+  background-image: url(/assets/images/others/brenda-godinez-367708-unsplash.jpg);
+}
+
+.app-order-item:nth-child(2) .img {
+  background-image: url(/assets/images/others/food-photographer-jennifer-pallian-650641-unsplash.jpg);
+}
+
+.app-order-item:last-child .img {
+  background-image: url(/assets/images/others/brooke-lark-96398-unsplash.jpg);
+} */
+
+.app-order-item .description .content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.app-order-item .description .content {
+  line-height: 22px;
+}
+
+.app-order-item .description .content p:last-child {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 2px;
+  line-height: 28px;
+}

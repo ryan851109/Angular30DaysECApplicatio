@@ -1,0 +1,15 @@
+<div class="item-list">
+
+  <!-- 精選商品區域開始 -->
+  <app-product-item *ngFor="let product of filterProducts" [item]="product"></app-product-item>
+  <!-- 精選商品區域開始 -->
+
+</div>
+
+<div class="pagination">
+  <ul class="font-dark-green">
+    <li (click)="setIndex(index - 1)"><i class="material-icons">arrow_left</i></li>
+      <li>{{index + 1}}</li>
+    <li (click)="setIndex(index + 1)"><i class="material-icons">arrow_right</i></li>
+  </ul>
+</div>
