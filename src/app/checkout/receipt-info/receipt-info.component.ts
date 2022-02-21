@@ -1,3 +1,4 @@
+import { ProductsServiceService } from './../../product-section/products.service.service';
 import { SendType } from './send-type';
 import { Component, OnInit } from '@angular/core';
 import { appPath } from 'src/app/app-path.const';
@@ -9,7 +10,7 @@ import { appPath } from 'src/app/app-path.const';
 })
 export class ReceiptInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productsServiceService:ProductsServiceService) { }
 
   path = appPath;
   sendType = SendType;
@@ -24,6 +25,10 @@ export class ReceiptInfoComponent implements OnInit {
 
   didSelected(type: number): boolean {
     return this.selectedType === type;
+  }
+
+  checkout(): void {
+    this.productsServiceService.checkout();
   }
 
 }

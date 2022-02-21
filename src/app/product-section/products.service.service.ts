@@ -47,7 +47,10 @@ export class ProductsServiceService {
     if(this.orders.find(order => order.name === product.name)){
       return false;
     }
-    console.log(this.products);
+    if(this.stores.find(store => store.name === product.name && store.account < 1)){
+      return false;
+    }
+    console.log(this.stores);
     this.orders.push(Object.assign({}, product));
     this.setTotalPrice();
     return true;
@@ -73,4 +76,29 @@ export class ProductsServiceService {
     this.totalPrice = 0;
     this.orders.forEach(order => this.totalPrice += (order.price * (order.account || 1)));
   }
+
+  checkout(): boolean {
+    let isOk = true;
+    this.orders.forEach(
+      order => {
+        if(order.account > (this.stores.find(store => store.name === order.name)?.account || 0)){
+          isOk = false;
+        }
+      });
+    if(isOk){
+      this.orders.forEach(
+        order => {
+          let target = this.stores.find(store => store.name === order.name);
+          if(target){
+            target.account -= order.account;
+          }
+        });
+      this.orders.splice(0,this.orders.length);
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
 }
